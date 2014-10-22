@@ -1,0 +1,26 @@
+{
+  "name": "rupert-config-angular",
+  "version": "0.0.1",
+  "description": "Rupert configuration to use Angular with ui-router.",
+  "repository": "git@github.com:DavidSouther/rupert-config-angular.git",
+  "main": "src/config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rupert",
+    "config",
+    "angular",
+    "bootstrap"
+  ],
+  "author": "David Souther <davidsouther@gmail.com> (https://davidsouther.com/)",
+  "license": "ISC",
+  "dependencies": {
+    "angular-builds": "^1.3.0",
+    "angular-ui-router": "^0.2.11"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-release": "^0.7.0"
+  }
+}
