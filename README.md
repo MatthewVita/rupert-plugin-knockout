@@ -10,6 +10,6 @@ Angular](https://cdn.rawgit.com/DavidSouther/rupert/master/src/assets/logos/Rupe
 
 ## Changelog
 
-* **0.0.2** *2014-11-03* Use stasset script types correctly.
+* **0.0.3** *2014-11-03* Use stasset script types correctly.
 * **0.0.1** *2014-10* Initial commit.
 
