@@ -5,7 +5,7 @@
   "repository": "git@github.com:DavidSouther/rupert-config-angular.git",
   "main": "src/config.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --require should --reporter nyan --compilers coffee:coffee-script/register"
+    "test": "./node_modules/.bin/mocha --require should --compilers coffee:coffee-script/register"
   },
   "keywords": [
     "rupert",
