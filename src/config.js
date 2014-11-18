@@ -17,6 +17,7 @@ module.exports = function (config){
         'angular-builds/angular-animate.min.js',
         'angular-builds/angular-touch.min.js',
         'angular-builds/angular-messages.min.js',
+        'angular-builds/angular-aria.min.js',
         'angular-ui-router/release/angular-ui-router.js',
     ]);
 
