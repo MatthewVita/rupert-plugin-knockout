@@ -9,7 +9,7 @@ module.exports = function (config){
     config.vendors.prefix = config.vendors.prefix || [];
     config.vendors.prefix.push(Path.resolve(__dirname, '../node_modules'));
 
-    config.vendors.js = (config.vendors.js || []).concat([
+    config.vendors.js = [
         'angular-builds/angular.min.js',
         'angular-builds/angular-cookies.min.js',
         'angular-builds/angular-resource.min.js',
@@ -19,7 +19,7 @@ module.exports = function (config){
         'angular-builds/angular-messages.min.js',
         'angular-builds/angular-aria.min.js',
         'angular-ui-router/release/angular-ui-router.js',
-    ]);
+    ].concat(config.vendors.js || []);
 
     return config;
 };
