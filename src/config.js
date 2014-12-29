@@ -1,5 +1,35 @@
 var Path = require('path');
 
+var TW = require(Path.join(
+    __dirname,
+    '../node_modules/rupert/node_modules/stassets/lib/Watchers/Template'
+));
+TW.prototype.getModuleName = function(shortPath){
+    var module = shortPath.replace(/\//g, '.') + '.template';
+    if (moduleRoot = this.config.templates.baseModule){
+        module = "" + moduleRoot + "." + module;
+    }
+    return module;
+};
+
+TW.prototype.cache = function(path){
+    var shortPath = this.getShortPath(path);
+    console.log('Caching');
+
+    var module = this.getModuleName(shortPath);
+
+    var pre =[
+        "angular.module(", "'", module, "'", ", ", "[]", ")",
+        ".run(function($templateCache){",
+        "$templateCache.put(", "'", shortPath, "'", ",", " '"
+    ];
+    var post = [
+        "');", "});"
+    ];
+
+    return {pre: pre, post: post};
+};
+
 module.exports = function (config){
     config.scripts = { types: [
         'main', 'provider', 'filter', 'service', 'controller', 'directive'
