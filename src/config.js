@@ -1,7 +1,10 @@
 var Path = require('path');
 
-var TemplateWatcher = require('stassets/lib/Watchers/Template');
-TemplateWatcher.prototype.getModuleName = function(shortPath){
+var TW = require(Path.join(
+    __dirname,
+    '../node_modules/rupert/node_modules/stassets/lib/Watchers/Template'
+));
+TW.prototype.getModuleName = function(shortPath){
     var module = shortPath.replace(/\//g, '.') + '.template';
     if (moduleRoot = this.config.templates.baseModule){
         module = "" + moduleRoot + "." + module;
@@ -9,9 +12,9 @@ TemplateWatcher.prototype.getModuleName = function(shortPath){
     return module;
 };
 
-TemplateWatcher.prototype.cache = function(path){
-    debugger;
+TW.prototype.cache = function(path){
     var shortPath = this.getShortPath(path);
+    console.log('Caching');
 
     var module = this.getModuleName(shortPath);
 

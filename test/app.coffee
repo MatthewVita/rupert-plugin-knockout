@@ -1,3 +1,4 @@
+Path = require('path')
 config =
   name: 'rupert-config-angular.test'
   root: __dirname
@@ -9,7 +10,7 @@ config =
         dependencies: {}
       js: ['extra.js']
 
-config.stassets.vendors.config.dependencies[__dirname + '/../src/config'] = yes
+config.stassets.vendors.config.dependencies[Path.relative(__dirname, '../src/config')] = yes
 
 rupert = require('rupert')(config)
 unless describe?
