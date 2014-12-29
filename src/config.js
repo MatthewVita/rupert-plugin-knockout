@@ -1,5 +1,32 @@
 var Path = require('path');
 
+var TemplateWatcher = require('stassets/lib/Watchers/Template');
+TemplateWatcher.prototype.getModuleName = function(shortPath){
+    var module = shortPath.replace(/\//g, '.') + '.template';
+    if (moduleRoot = this.config.templates.baseModule){
+        module = "" + moduleRoot + "." + module;
+    }
+    return module;
+};
+
+TemplateWatcher.prototype.cache = function(path){
+    debugger;
+    var shortPath = this.getShortPath(path);
+
+    var module = this.getModuleName(shortPath);
+
+    var pre =[
+        "angular.module(", "'", module, "'", ", ", "[]", ")",
+        ".run(function($templateCache){",
+        "$templateCache.put(", "'", shortPath, "'", ",", " '"
+    ];
+    var post = [
+        "');", "});"
+    ];
+
+    return {pre: pre, post: post};
+};
+
 module.exports = function (config){
     config.scripts = { types: [
         'main', 'provider', 'filter', 'service', 'controller', 'directive'
