@@ -1,9 +1,6 @@
 var Path = require('path');
 
-var TW = require(Path.join(
-    __dirname,
-    '../node_modules/rupert/node_modules/stassets/lib/Watchers/Template'
-));
+var TW = require('rupert').Stassets.constructors.Template;
 TW.prototype.getModuleName = function(shortPath){
     var module = shortPath.replace(/\//g, '.') + '.template';
     if (moduleRoot = this.config.templates.baseModule){
