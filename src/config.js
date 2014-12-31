@@ -31,9 +31,10 @@ TW.prototype.cache = function(path){
 TW.prototype.concat = cts.SourceMap.prototype.concat; // Skip the globals.
 
 module.exports = function (config){
-    config.scripts = { types: [
+    config.scripts = config.scripts || {};
+    config.scripts.types = [
         'main', 'provider', 'filter', 'service', 'controller', 'directive'
-    ]};
+    ].concat(config.scripts.types || []);
 
     config.vendors = config.vendors || {};
     config.vendors.prefix = config.vendors.prefix || [];
