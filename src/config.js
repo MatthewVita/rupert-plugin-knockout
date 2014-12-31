@@ -1,6 +1,8 @@
 var Path = require('path');
 
-var TW = require('rupert').Stassets.constructors.Template;
+var cts = require('rupert').Stassets.constructors;
+
+var TW = cts.Template;
 TW.prototype.getModuleName = function(shortPath){
     var module = shortPath.replace(/\//g, '.') + '.template';
     if (moduleRoot = this.config.templates.baseModule){
@@ -26,6 +28,7 @@ TW.prototype.cache = function(path){
 
     return {pre: pre, post: post};
 };
+TW.prototype.concat = cts.SourceMap.prototype.concat; // Skip the globals.
 
 module.exports = function (config){
     config.scripts = { types: [

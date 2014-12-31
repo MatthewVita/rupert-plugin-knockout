@@ -32,6 +32,7 @@ else
         .get('/templates.js')
         .expect(200)
         .expect ({text})->
+            text.indexOf('window').should.equal -1
             text.indexOf('$templateCache').should.be.greaterThan -1
             text.indexOf('fixtures').should.be.greaterThan -1
             return
