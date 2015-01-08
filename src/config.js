@@ -50,3 +50,5 @@ module.exports = function (config){
         'angular-ui-router/release/angular-ui-router.js',
     ]);
 };
+
+module.exports.Gruntfile = require('./Gruntfile');
