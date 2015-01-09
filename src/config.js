@@ -13,7 +13,6 @@ TW.prototype.getModuleName = function(shortPath){
 
 TW.prototype.cache = function(path){
     var shortPath = this.getShortPath(path);
-    console.log('Caching');
 
     var module = this.getModuleName(shortPath);
 
