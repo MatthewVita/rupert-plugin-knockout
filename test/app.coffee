@@ -1,6 +1,6 @@
 Path = require('path')
 server =
-  name: 'rupert-config-angular.test'
+  name: 'rupert-plugin-knockout.test'
   root: __dirname
   plugins:
     dependencies: {}
@@ -21,8 +21,8 @@ else
     it 'attaches scripts to the config', ->
       config.stassets.vendors.js.length.should.equal 10
 
-    it 'registers Angular file types', ->
-      config.stassets.scripts.types.length.should.equal 6
+    it 'registers Knockout file types', ->
+      config.stassets.scripts.types.length.should.equal 0
 
     it 'loads before given vendors', ->
       config.stassets.vendors.js[9].should.equal['extra.js']
@@ -34,8 +34,7 @@ else
           .get('/templates.js')
           .expect(200)
           .expect ({text})->
-              text.indexOf('window').should.equal -1
-              text.indexOf('$templateCache').should.be.greaterThan -1
+              text.indexOf('window').should.be.greaterThan -1
               text.indexOf('fixtures').should.be.greaterThan -1
               return
           .end(done)
