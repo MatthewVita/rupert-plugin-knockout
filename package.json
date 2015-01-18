@@ -1,6 +1,6 @@
 {
   "name": "rupert-plugin-knockout",
-  "version": "0.1.1",
+  "version": "0.0.1",
   "description": "Rupert configuration to use Knockout",
   "repository": "",
   "main": "src/config.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "rupert",
-    "config",
+    "plugin",
     "knockout"
   ],
   "author": "Matthew Vita <matthewvita@live.com>",
