@@ -17,7 +17,7 @@ config = rupert.config
 unless describe?
   rupert.start()
 else
-  describe 'Rupert Config Angular', ->
+  describe 'Rupert Plugin Knockout', ->
     it 'attaches scripts to the config', ->
       config.stassets.vendors.js.length.should.equal 10
 
@@ -26,15 +26,3 @@ else
 
     it 'loads before given vendors', ->
       config.stassets.vendors.js[9].should.equal['extra.js']
-
-    it 'injects into the $templateCache', (done)->
-      rupert.then ->
-        rupert.app.stassets.promise.then ->
-          require('supertest')(rupert.app)
-          .get('/templates.js')
-          .expect(200)
-          .expect ({text})->
-              text.indexOf('window').should.be.greaterThan -1
-              text.indexOf('fixtures').should.be.greaterThan -1
-              return
-          .end(done)
