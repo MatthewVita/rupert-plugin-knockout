@@ -12,7 +12,7 @@
     "config",
     "knockout"
   ],
-  "author": "Matthew Vita <matthewvita@live.com>)",
+  "author": "Matthew Vita <matthewvita@live.com>",
   "license": "ISC",
   "dependencies": {
     "knockout": "^3.2.0"
