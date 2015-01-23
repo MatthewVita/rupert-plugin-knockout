@@ -1,22 +1,23 @@
 {
   "name": "rupert-plugin-knockout",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rupert configuration to use Knockout",
   "main": "src/config.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MatthewVita/rupert-plugin-knockout.git"
+    "url": "https://github.com/RupertJS/rupert-plugin-knockout.git"
   },
   "keywords": [
     "rupert",
     "plugin",
     "knockout"
   ],
-  "author": "Matthew Vita <MatthewVita@live.com>",
+  "author": "Matthew Vita <matthewvita@live.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MatthewVita/rupert-plugin-knockout/issues"
-  },  "dependencies": {
+    "url": "https://github.com/RupertJS/rupert-plugin-knockout/issues"
+  },
+  "dependencies": {
     "knockout": "^3.2.0",
     "jquery": "^2.1.3"
   },
@@ -31,6 +32,5 @@
   },
   "directories": {
     "test": "test"
-  },
-  "homepage": "https://github.com/MatthewVita/rupert-plugin-knockout"
+  }
 }
