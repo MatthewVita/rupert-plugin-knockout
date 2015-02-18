@@ -19,10 +19,10 @@ unless describe?
 else
   describe 'Rupert Plugin Knockout', ->
     it 'attaches scripts to the config', ->
-      config.stassets.vendors.js.length.should.equal 10
+      config.stassets.vendors.js.length.should.equal 3
 
     it 'registers Knockout file types', ->
-      config.stassets.scripts.types.length.should.equal 0
+      config.stassets.scripts.types.length.should.equal 1
 
     it 'loads before given vendors', ->
-      config.stassets.vendors.js[9].should.equal['extra.js']
+      config.stassets.vendors.js[2].should.equal['extra.js']
