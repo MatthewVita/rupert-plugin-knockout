@@ -1,6 +1,6 @@
 {
   "name": "rupert-plugin-knockout",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Rupert configuration to use Knockout",
   "main": "src/config.js",
   "scripts": {
