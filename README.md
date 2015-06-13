@@ -1,7 +1,7 @@
 ## Rupert Knockout configurations
 
 Loads core Knockout library with jQuery (mainly for Ajax functions). Contains no
-styling. (If you're getting started, you probably want [Rupert](https://github.com/RupertJS/rupert#rupert) itself.)
+styling. (If you're getting started, you probably want [Rupert](https://rupertjs.io) itself.)
 
 ![Rupert Knockout](https://cdn.rawgit.com/DavidSouther/rupert/master/src/assets/logos/Rupert_Knockout.svg)
 
